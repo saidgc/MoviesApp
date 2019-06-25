@@ -18,14 +18,6 @@ class Login extends StatelessWidget {
           borderRadius: new BorderRadius.all(
             Radius.circular(8.0),
           ),
-          /*
-                      * boxShadow: <BoxShadow> [
-                        new BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 10.0,
-                          offset: new Offset(0.0, 10.0)
-                        )
-                      ]*/
         ));
   }
 
@@ -34,17 +26,22 @@ class Login extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: new Container(
-        color: Colors.white,
-        child: Center(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            boton("Sign In"),
-            boton("Log In"),
-          ],
-        )),
-      ),
+      appBar: AppBar(title: Text("titulo"),),
+      body: new Column(
+        children: <Widget>[
+          new Container(
+            color: Colors.white,
+            child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    boton("Sign In"),
+                    boton("Log In")
+                  ],
+                )),
+          ),
+        ],
+      )
     );
   }
 }
