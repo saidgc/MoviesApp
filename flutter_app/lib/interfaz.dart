@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'principalMoviesSlider.dart';
+import 'secondMoviesSlider.dart';
 
 class Interfaz extends StatelessWidget {
   Widget titulo() {
@@ -27,6 +29,20 @@ class Interfaz extends StatelessWidget {
             fontSize: 28.0,
             fontWeight: FontWeight.w700,
             color: Color(0xFF666666)),
+      ),
+    );
+  }
+
+  Widget scondTitle() {
+    return Container(
+      margin: EdgeInsets.only(left: 22.0, top: 15.0, bottom: 10.0),
+      child: Text(
+        "Avances de películas",
+        textAlign: TextAlign.left,
+        style: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.w700,
+            color: Color(0xFF444444)),
       ),
     );
   }
@@ -58,7 +74,13 @@ class Interfaz extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.93,
               child: ListView(
                 scrollDirection: Axis.vertical,
-                children: <Widget>[titulo(), subTitulo(), PrincipalMoviesSlider()],
+                children: <Widget>[
+                  titulo(),
+                  subTitulo(),
+                  PrincipalMoviesSlider(),
+                  scondTitle(),
+                  SecondMoviesSlider()
+                ],
               ),
             ),
             tabBar()
