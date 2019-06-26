@@ -4,14 +4,28 @@ import 'package:flutter/material.dart';
 class Interfaz extends StatelessWidget {
   Widget titulo() {
     return Container(
-      margin: EdgeInsets.only(left: 22.0, top: 25.0, bottom: 10.0),
+      margin: EdgeInsets.only(left: 22.0, top: 25.0),
       child: Text(
         "Películas",
         textAlign: TextAlign.left,
         style: TextStyle(
-            fontSize: 34.0,
+            fontSize: 33.0,
             fontWeight: FontWeight.w700,
             color: Color(0xFF444444)),
+      ),
+    );
+  }
+
+  Widget subTitulo() {
+    return Container(
+      margin: EdgeInsets.only(left: 22.0, top: 0, bottom: 10.0),
+      child: Text(
+        "Populares",
+        textAlign: TextAlign.left,
+        style: TextStyle(
+            fontSize: 28.0,
+            fontWeight: FontWeight.w700,
+            color: Color(0xFF666666)),
       ),
     );
   }
@@ -33,7 +47,7 @@ class Interfaz extends StatelessWidget {
           child: Text(
             "Genero",
             textAlign: TextAlign.left,
-            style: TextStyle(color: Colors.black26),
+            style: TextStyle(color: Colors.black38),
           ),
         )
       ],
@@ -56,7 +70,7 @@ class Interfaz extends StatelessWidget {
         child: Text(
           "Genero",
           textAlign: TextAlign.left,
-          style: TextStyle(color: Colors.black26),
+          style: TextStyle(color: Colors.black38),
         ),
       )
     ]);
@@ -104,7 +118,7 @@ class Interfaz extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.93,
               child: ListView(
                 scrollDirection: Axis.vertical,
-                children: <Widget>[titulo(), listHorizontal()],
+                children: <Widget>[titulo(), subTitulo(), listHorizontal()],
               ),
             ),
             tabBar()
